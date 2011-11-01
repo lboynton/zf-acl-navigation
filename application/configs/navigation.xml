@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<nav>
+		<home>
+			<label>Home</label>
+			<module>default</module>
+			<controller>index</controller>
+			<action>index</action>
+			<pages>
+				<login>
+					<label>Log In</label>
+					<controller>user</controller>
+					<action>login</action>
+					<resource>user</resource>
+					<privilege>login</privilege>
+				</login>
+				<register>
+					<label>Register</label>
+					<controller>user</controller>
+					<action>register</action>
+					<resource>user</resource>
+					<privilege>register</privilege>
+				</register>
+				<logout>
+					<label>Log out</label>
+					<controller>user</controller>
+					<action>logout</action>
+					<resource>user</resource>
+					<privilege>logout</privilege>
+				</logout>
+			</pages>
+		</home>
+		<client>
+			<label>Client Area</label>
+			<controller>user</controller>
+			<action>index</action>
+			<resource>user</resource>
+			<privilege>index</privilege>
+		</client>
+		<admin>
+			<label>Admin Area</label>
+			<module>admin</module>
+			<controller>user</controller>
+			<action>index</action>
+			<resource>admin</resource>
+			<privilege>index</privilege>
+		</admin>
+	</nav>
+</config>

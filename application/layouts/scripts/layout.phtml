@@ -1,0 +1,21 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<?php echo $this->headTitle('Zend_Acl and Zend_Navigation'); ?>
+		<?php echo $this->headLink(); ?>
+		<?php echo $this->headScript(); ?>
+		<?php echo $this->headStyle(); ?>
+    </head>
+    <body>
+		<div id="container">
+			<nav>
+				<?php echo $this->navigation(); ?>
+			</nav>
+			<div id="content">
+				<?php echo $this->partial('messages.phtml', array('messages' => $this->messages)); ?>
+				<?php echo $this->layout()->content; ?>
+			</div>
+		</div>				
+    </body>
+</html>

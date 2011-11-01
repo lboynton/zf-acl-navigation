@@ -1,0 +1,22 @@
+<?php if (isset($this->messages) && count($this->messages)) : ?>
+	<?php foreach ($this->messages as $message) : ?>
+		<?php
+		if(is_array($message) && $message['type'] == 'error')
+		{
+			$cssClass = 'ui-state-error';
+			$message = $message['message'];
+		}
+		else
+		{
+			$cssClass = 'ui-state-highlight';
+		}
+		?>
+
+		<div class="message <?php echo $cssClass; ?> ui-corner-all">
+		<p>
+			<span style="float: left; margin-right: .3em;" class="ui-icon ui-icon-info"></span>
+			<?php echo $this->escape($message); ?>
+		</p>
+	</div>
+	<?php endforeach; ?>
+<?php endif; ?>
